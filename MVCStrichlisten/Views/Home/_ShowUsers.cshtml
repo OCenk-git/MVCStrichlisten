@@ -1,0 +1,53 @@
+﻿@model List<Benutzer>
+
+<div>
+    @foreach (Benutzer benutzer in Model)
+    {
+        <div class="row">
+            <div class="col-xl-1 col-md-1 col-2">
+                <button type="button" class="bi bi-gear settings" data-bs-toggle="modal" data-bs-target="#ModalForm" value="@benutzer.Id" data-name="@benutzer.Name"></button>
+            </div>
+            <div class="col-xl-2 col-md-4 col-3">
+                <p>@benutzer.Name</p>
+            </div>
+            <div class="col-md-1 col-1">
+                <a asp-controller="Home" asp-action="Up" data-ajax="true" data-ajax-update="#users" asp-route-username="@benutzer.Name" class="bi bi-plus-circle"></a>
+            </div>
+            <div class="col-md-4 col-3">
+                <input type="text" value="@benutzer.Anzahl" readonly class="form-control" />
+            </div>
+            <div class="col-md-1 col-1">
+                <a asp-controller="Home" asp-action="Down" data-ajax="true" data-ajax-update="#users" asp-route-username="@benutzer.Name" class="bi bi-dash-circle"></a>
+            </div>
+            <div class="col-md-1 col-1">
+                <a asp-controller="Home" asp-action="DeleteUser" data-ajax="true" data-ajax-update="#users" asp-route-id="@benutzer.Id" class="bi bi-trash"></a>
+            </div>
+        </div>
+    }
+</div>
+
+<div id="ModalForm" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Namen ändern</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="POST" asp-action="ChangeUserName" data-ajax="true" data-ajax-update="#users">
+                    <div class="form-group">
+                        <label class="control-label">Neuer Name:</label>
+                        <div>
+                            <input type="hidden" id="userId" name="userId" />
+                            <input type="text" class="form-control input-lg" name="username" id="userName">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="closeModal">Ändern</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/site.js"></script>

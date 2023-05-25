@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCStrichlisten", "MVCStrichlisten\MVCStrichlisten.csproj", "{FCE0BBB1-BB9F-4395-A596-DD9A0530DD11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCE0BBB1-BB9F-4395-A596-DD9A0530DD11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE0BBB1-BB9F-4395-A596-DD9A0530DD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE0BBB1-BB9F-4395-A596-DD9A0530DD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE0BBB1-BB9F-4395-A596-DD9A0530DD11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {433D1898-E22E-4DB8-9A21-47F657226743}
+	EndGlobalSection
+EndGlobal
